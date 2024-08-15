@@ -1,0 +1,38 @@
+.app{
+    // background-color: black;
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        padding: 0 24px;
+        padding: 20px;
+        background-color: #1B4F72 ;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+        img{
+            width: 60px;
+            
+        };
+        .category{
+            display: flex;
+            list-style: none;
+            margin: 10px 16px;
+            gap: 20px;
+            
+            li{
+               background-color: #EAEDED ;
+               border-radius: 30px;
+               color:#333333;
+               padding: 10px;
+               min-width: 100px;
+               text-align: center;
+               cursor: pointer;
+    
+            }
+        }
+    }
+
+}

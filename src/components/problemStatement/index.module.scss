@@ -1,0 +1,21 @@
+.problemContainer{
+    background-color: white;
+    color: #333333;
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .difficulty{
+        background-color: #EAEDED;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+}
+
+.changeColor{
+    color:white;
+}
