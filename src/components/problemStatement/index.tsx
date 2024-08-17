@@ -1,13 +1,8 @@
 import React, { FC } from 'react';
+import { DSAProblemComponentProps } from '@/type';
 import styles from './index.module.scss'
 
-type DSAProblemComponentProps={
-    title: string;
-    difficulty: string;
-    description: string;
-    examples: Array<{ input: string, output: string, explanation: string }>;
-    constraints: Array<string>;
-}
+
 
 const DSAProblemComponent:FC<DSAProblemComponentProps> = ({ title, difficulty, description, examples, constraints }) => {
     return (

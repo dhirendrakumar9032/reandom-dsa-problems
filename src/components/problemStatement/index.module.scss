@@ -7,11 +7,13 @@
     gap: 16px;
 
     .difficulty{
-        background-color: #EAEDED;
-        border-radius: 5px;
-        padding: 5px 10px;
+        color: #2ECC71;
         font-weight: bold;
         margin-bottom: 10px;
+    }
+
+    .constraint{
+        margin-left: 20px;
     }
 
 }
