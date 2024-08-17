@@ -1,27 +1,31 @@
-.navbar{
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 24px;
+  padding: 20px;
+  background-color: #1B4F72;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: sticky;
+  top: 0;
+
+  img {
+    width: 60px;
+
+  }
+
+  ;
+
+
+  .selectorContainer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    padding: 0 24px;
-    padding: 20px;
-    background-color: #1B4F72 ;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    min-width: 100px;
+    gap: 10px;
+  }
 
+  .selector {
+    min-width: 100px;
+  }
 
-    img{
-        width: 60px;
-        
-    };
-    
-
-    .selectorContainer {
-        display: flex;
-        min-width: 100px
-      }
-      
-      .selector {
-        width: 100%;
-      }
-      
 }

@@ -3,9 +3,11 @@ import { Table } from 'antd';
 import React, { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './index.module.scss';
+import { useFilterStore } from '@/store';
 
 const Problemtable: FC<ProblemtableProps> = ({ problemsData }) => {
   const navigate = useNavigate();
+  const {setRandomeData}=useFilterStore()
 
   const columns = [
     {
@@ -39,6 +41,7 @@ const Problemtable: FC<ProblemtableProps> = ({ problemsData }) => {
   const handleRowClick = (record: any) => {
     const urlTitle = encodeURIComponent(record.title.toLowerCase().replace(/\s+/g, '-'));
     navigate(`/problem/${urlTitle}`);
+    setRandomeData(null)
   };
 
   return (

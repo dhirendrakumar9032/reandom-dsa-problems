@@ -1,7 +1,10 @@
 import { create } from 'zustand';
 import { DSAProblemComponentProps } from './type';
+import { data } from './utils/data';
 
 interface FilterState {
+  randomData:DSAProblemComponentProps|null;
+  setRandomeData:(randomData:DSAProblemComponentProps|null)=>void;
   problemsData: DSAProblemComponentProps[];
   setProblemsData: (data: DSAProblemComponentProps[]) => void;
   selectedCategory: string | null;
@@ -15,8 +18,10 @@ interface FilterState {
 export const useFilterStore = create<FilterState>((set) => ({
   selectedCategory: 'all',
   selectedDifficulty: null,
-  problemsData: [],
+  problemsData: data,
   filteredData: [],
+  randomData:null,
+  setRandomeData:(data)=>set({randomData: data}),
   setFilteredData: (data) => set({ filteredData: data }),
   setProblemsData: (data) => set({ problemsData: data }), 
   setSelectedCategory: (category) => set({ selectedCategory: category }),

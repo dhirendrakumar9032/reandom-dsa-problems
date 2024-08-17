@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 
 const useFilter = () => {
-    const {  setSelectedCategory,selectedCategory,problemsData, setProblemsData, selectedDifficulty,filteredData,setFilteredData, setSelectedDifficulty } = useFilterStore();
+    const {  setSelectedCategory,selectedCategory,problemsData,setRandomeData, filteredData,setFilteredData, setSelectedDifficulty } = useFilterStore();
 
 
     const handleCategoryChange = (category: string) => {
@@ -16,18 +16,31 @@ const useFilter = () => {
         setSelectedCategory(null);
     }
 
-    console.log('=>',{ problemsData})
 
     const filterDataBasedOncategory = (category: string|null) =>{
         const filteredData= problemsData.filter((problem) => problem.category === category);
+        console.log('xx1',filteredData,selectedCategory)
         setFilteredData(filteredData);
     }
+
+    const hanndleRandomData = ()=>{
+        if(filteredData.length){
+            const randomIndex = Math.floor(Math.random() * filteredData.length);
+            setRandomeData(filteredData[randomIndex]);
+        }else{
+            const randomIndex = Math.floor(Math.random() * problemsData.length);
+            setRandomeData(problemsData[randomIndex]);
+        }
+    }
+
     
+   
 
     return {
         handleCategoryChange,
         handleDifficultyChange,
-        filterDataBasedOncategory
+        filterDataBasedOncategory,
+        hanndleRandomData
     }
 }
 
